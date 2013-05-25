@@ -12,12 +12,12 @@ $(function() {
         } else {
             throw Error('Unknown clear type : ' + val);
         }
-        $("#lcd").val(calculator.getExpression());
+        $("#lcd").val(calculator.getFormula());
     });
     
     var appendToLCD = function(ch) {
         calculator.append(ch);
-        $("#lcd").val(calculator.getExpression());
+        $("#lcd").val(calculator.getFormula());
         $("#clearButton").val('CE');
     }
     
@@ -84,6 +84,6 @@ $(function() {
     $("#equalButton").click(function(){
         calculator.calculate();
         $("#clearButton").val('AC');
-        $("#lcd").val(calculator.getExpression());
+        $("#lcd").val(calculator.getFormula());
     });
 });
